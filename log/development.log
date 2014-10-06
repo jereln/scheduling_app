@@ -1262,3 +1262,656 @@ Started GET "/assets/clients.js?body=1" for 127.0.0.1 at 2014-10-06 14:33:12 -07
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-06 14:33:12 -0700
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2014-10-06 14:45:31 -0700
+Processing by AppointmentsController#new as HTML
+  Rendered appointments/_form.html.erb (2.0ms)
+  Rendered appointments/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 90ms (Views: 89.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2014-10-06 14:45:56 -0700
+Processing by AppointmentsController#new as HTML
+  Rendered appointments/_form.html.erb (1.5ms)
+  Rendered appointments/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 80ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui/theme.css?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/jquery-ui/core.css?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/jquery-ui/datepicker.css?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/clients.css?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/therapists.css?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/clients.js?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/therapists.js?body=1" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/jquery-ui/ui-bg_flat_75_ffffff_40x100.png" for 127.0.0.1 at 2014-10-06 14:45:57 -0700
+
+
+Started GET "/assets/jquery-ui/ui-bg_highlight-soft_75_cccccc_1x100.png" for 127.0.0.1 at 2014-10-06 14:45:58 -0700
+
+
+Started GET "/assets/jquery-ui/ui-icons_222222_256x240.png" for 127.0.0.1 at 2014-10-06 14:45:58 -0700
+
+
+Started GET "/assets/jquery-ui/ui-bg_glass_55_fbf9ee_1x400.png" for 127.0.0.1 at 2014-10-06 14:45:58 -0700
+
+
+Started GET "/assets/jquery-ui/ui-bg_glass_75_e6e6e6_1x400.png" for 127.0.0.1 at 2014-10-06 14:45:58 -0700
+
+
+Started GET "/assets/jquery-ui/ui-bg_glass_75_dadada_1x400.png" for 127.0.0.1 at 2014-10-06 14:46:48 -0700
+
+
+Started GET "/assets/jquery-ui/ui-icons_454545_256x240.png" for 127.0.0.1 at 2014-10-06 14:46:48 -0700
+
+
+Started GET "/appointments" for 127.0.0.1 at 2014-10-06 14:46:54 -0700
+Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT "appointments".* FROM "appointments"[0m
+  Rendered appointments/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 96ms (Views: 95.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2014-10-06 14:46:56 -0700
+Processing by AppointmentsController#new as HTML
+  Rendered appointments/_form.html.erb (1.6ms)
+  Rendered appointments/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 92ms (Views: 91.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+Processing by AppointmentsController#new as HTML
+  Rendered appointments/_form.html.erb (1.5ms)
+  Rendered appointments/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 90ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui/theme.css?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/jquery-ui/core.css?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/jquery-ui/datepicker.css?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/clients.css?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/therapists.css?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/clients.js?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/therapists.js?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-06 14:47:00 -0700
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2014-10-06 14:50:12 -0700
+Processing by AppointmentsController#new as HTML
+  Rendered appointments/_form.html.erb (1.4ms)
+  Rendered appointments/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 330ms (Views: 329.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui/datepicker.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/jquery-ui/theme.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/clients.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/jquery-ui/core.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/therapists.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/clients.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/therapists.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:13 -0700
+
+
+Started GET "/appointments" for 127.0.0.1 at 2014-10-06 14:50:16 -0700
+Processing by AppointmentsController#index as HTML
+  [1m[35mAppointment Load (0.2ms)[0m  SELECT "appointments".* FROM "appointments"
+  Rendered appointments/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 87ms (Views: 85.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2014-10-06 14:50:17 -0700
+Processing by AppointmentsController#new as HTML
+  Rendered appointments/_form.html.erb (2.0ms)
+  Rendered appointments/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 89ms (Views: 88.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+Processing by AppointmentsController#new as HTML
+  Rendered appointments/_form.html.erb (1.5ms)
+  Rendered appointments/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 83ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui/theme.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/jquery-ui/core.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/jquery-ui/datepicker.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/clients.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/therapists.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/clients.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/therapists.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-06 14:50:21 -0700
+
+
+Started GET "/assets/jquery-ui/theme.css?body=1" for 127.0.0.1 at 2014-10-06 14:52:02 -0700
+
+
+Started GET "/assets/jquery-ui/core.css?body=1" for 127.0.0.1 at 2014-10-06 14:52:02 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-06 14:52:02 -0700
+
+
+Started GET "/assets/jquery-ui/datepicker.css?body=1" for 127.0.0.1 at 2014-10-06 14:52:02 -0700
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2014-10-06 14:52:02 -0700
+
+
+Started GET "/assets/clients.css?body=1" for 127.0.0.1 at 2014-10-06 14:52:02 -0700
+
+
+Started GET "/assets/therapists.css?body=1" for 127.0.0.1 at 2014-10-06 14:52:02 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-06 14:52:02 -0700
+
+
+Started GET "/appointments" for 127.0.0.1 at 2014-10-06 14:52:39 -0700
+Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT "appointments".* FROM "appointments"[0m
+  Rendered appointments/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 228ms (Views: 226.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2014-10-06 14:52:40 -0700
+Processing by AppointmentsController#new as HTML
+  Rendered appointments/_form.html.erb (2.2ms)
+  Rendered appointments/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 96ms (Views: 95.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+Processing by AppointmentsController#new as HTML
+  Rendered appointments/_form.html.erb (1.7ms)
+  Rendered appointments/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 96ms (Views: 95.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-ui/theme.css?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/jquery-ui/core.css?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/therapists.css?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/jquery-ui/datepicker.css?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/clients.css?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/clients.js?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+
+
+Started GET "/assets/therapists.js?body=1" for 127.0.0.1 at 2014-10-06 14:55:57 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNameToUsers (20141006220932)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "name" varchar(255)[0m
+SQLite3::SQLException: no such table: users: ALTER TABLE "users" ADD "name" varchar(255)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddNameToClients (20141006221019)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "clients" ADD "name" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141006221019"]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_clients_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_clients_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_clients_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_clients_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_therapists_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_therapists_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_therapists_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_therapists_on_email' AND type='index'
+
+
+
+Started GET "/appointments" for 127.0.0.1 at 2014-10-06 15:19:14 -0700
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT "appointments".* FROM "appointments"[0m
+  Rendered appointments/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 83ms (Views: 80.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/appointments/new" for 127.0.0.1 at 2014-10-06 15:19:17 -0700
+Processing by AppointmentsController#new as HTML
+Completed 401 Unauthorized in 6ms
+
+
+Started GET "/therapists/sign_in" for 127.0.0.1 at 2014-10-06 15:19:17 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered vendor/bundle/gems/devise-3.2.4/app/views/devise/shared/_links.erb (1.6ms)
+  Rendered vendor/bundle/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 97ms (Views: 89.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/routes" for 127.0.0.1 at 2014-10-06 16:04:18 -0700
+
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  vendor/bundleactionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundleactionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundlerailties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundlerailties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundleactivesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundleactivesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundleactivesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundlerailties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundleactionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundlerack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  vendor/bundlerack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  vendor/bundleactivesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  vendor/bundlerack (1.5.2) lib/rack/lock.rb:17:in `call'
+  vendor/bundleactionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  vendor/bundlerack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  vendor/bundlerailties (4.1.6) lib/rails/engine.rb:514:in `call'
+  vendor/bundlerailties (4.1.6) lib/rails/application.rb:144:in `call'
+  vendor/bundlerack (1.5.2) lib/rack/lock.rb:17:in `call'
+  vendor/bundlerack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  vendor/bundlerack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/reedns/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/reedns/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/reedns/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered vendor/bundle/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.1ms)
+
+
+Started GET "/clients/sign_up" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered vendor/bundle/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.4ms)
+  Rendered vendor/bundle/gems/devise-3.2.4/app/views/devise/registrations/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 97ms (Views: 93.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery-ui/theme.css?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/jquery-ui/core.css?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/clients.css?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/therapists.css?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/jquery-ui/datepicker.css?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/clients.js?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started GET "/assets/therapists.js?body=1" for 127.0.0.1 at 2014-10-06 16:04:52 -0700
+
+
+Started POST "/clients" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SwwxjcK2HmRrpDb+W2pT2LhE2TvRfx9R6tflBQIO+OM=", "client"=>{"email"=>"jim@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mClient Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "clients"  WHERE "clients"."email" = 'jim@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "clients" ("created_at", "email", "encrypted_password", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-10-06 23:05:14.363643"], ["email", "jim@example.com"], ["encrypted_password", "$2a$10$kPS6YOQIP9anj3sUVwSiC.aT6Iid63F1BuELTq0atxFUsk/RGxmb6"], ["updated_at", "2014-10-06 23:05:14.363643"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "clients" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "clients"."id" = 1[0m  [["current_sign_in_at", "2014-10-06 23:05:14.367495"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-10-06 23:05:14.367495"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-10-06 23:05:14.368340"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 92ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT "appointments".* FROM "appointments"[0m
+  Rendered appointments/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 96ms (Views: 92.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery-ui/core.css?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/jquery-ui/theme.css?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/clients.css?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/jquery-ui/datepicker.css?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/appointments.css?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/therapists.css?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/jquery-ui/core.js?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/jquery-ui/datepicker.js?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/appointments.js?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/clients.js?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/therapists.js?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-06 16:05:14 -0700
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2014-10-06 16:05:18 -0700
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered appointments/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 86ms (Views: 84.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/appointments" for 127.0.0.1 at 2014-10-06 16:05:23 -0700
+Processing by AppointmentsController#index as HTML
+  [1m[36mAppointment Load (0.2ms)[0m  [1mSELECT "appointments".* FROM "appointments"[0m
+  Rendered appointments/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 89ms (Views: 88.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/appointments/1/edit" for 127.0.0.1 at 2014-10-06 16:05:25 -0700
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAppointment Load (0.1ms)[0m  SELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = ? LIMIT 1  [["id", 1]]
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/therapists/sign_in" for 127.0.0.1 at 2014-10-06 16:05:25 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered vendor/bundle/gems/devise-3.2.4/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered vendor/bundle/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 91ms (Views: 84.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/appointments/1" for 127.0.0.1 at 2014-10-06 16:05:28 -0700
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.1ms)[0m  [1mSELECT  "appointments".* FROM "appointments"  WHERE "appointments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered appointments/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 83ms (Views: 82.1ms | ActiveRecord: 0.1ms)

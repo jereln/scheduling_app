@@ -1,5 +1,6 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_therapist!, except: [:index, :show]
 
   # GET /appointments
   def index
