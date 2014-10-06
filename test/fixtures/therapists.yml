@@ -1,0 +1,4 @@
+therapist:
+  name: donna
+  email: donna@example.com
+  encrypted_password: <%= Therapist.new.send(:password_digest, 'password') %>

@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.1.6'
 gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.3'
@@ -11,13 +10,16 @@ gem 'turbolinks'
 gem 'devise'
 gem 'pundit'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-group :development do 
+gem 'jquery-ui-rails'
+
+group :development do
   gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller'
 end
 group :test do
   gem 'minitest-rails-capybara'
+  gem 'poltergeist'
   gem 'launchy'
   gem 'minitest-rails'
 end
