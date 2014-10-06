@@ -1,0 +1,11 @@
+reserved_appointment:
+  date: '10/29/1014'
+  end_time: '3:00pm'
+  start_time: '9:00pm'
+  reserved: true
+
+available_appointment:
+  date: '10/30/1014'
+  end_time: '3:00pm'
+  start_time: '9:00pm'
+  reserved: false
