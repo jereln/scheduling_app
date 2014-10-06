@@ -1,0 +1,17 @@
+<%= form_for(@therapist) do |f| %>
+  <% if @therapist.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@therapist.errors.count, "error") %> prohibited this therapist from being saved:</h2>
+
+      <ul>
+      <% @therapist.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
