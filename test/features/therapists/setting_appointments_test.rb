@@ -2,8 +2,8 @@ require 'test_helper'
 
 feature 'setting appointments' do
   scenario 'therapist adds an appointment' do
-    sign_in_therapist
-
+    sign_in_user(:therapist)
+    save_and_open_page
     visit new_appointment_path
     fill_in 'Date', with: '10/21/14'
     fill_in 'Start time', with: '3:00pm'
@@ -13,14 +13,14 @@ feature 'setting appointments' do
   end
 
   scenario 'a client cannnot set an appointment' do
-    sign_in_client
+    sign_in_user(:client)
 
     visit new_appointment_path
     page.must_have_content 'Sign in'
   end
 
   scenario 'a client cannot see a New Appointment link' do
-    sign_in_client
+    sign_in_user(:client)
 
     visit appointments_path
     page.wont_have_content 'New Appointment'

@@ -1,7 +1,7 @@
 class AppointmentPolicy < ApplicationPolicy
   class Scope < Struct.new(:user, :scope)
     def resolve
-      if user.class == Therapist
+      if user.therapist?
         scope.all
       else
         scope.where(reserved: false)
@@ -11,7 +11,7 @@ class AppointmentPolicy < ApplicationPolicy
 
   def show?
     return true if record.reserved == false
-    return true if user.class == Therapist
+    return true if user.therapist?
     false
   end
 end
