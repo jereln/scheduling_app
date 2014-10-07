@@ -1,5 +1,5 @@
 class ClientsController < ApplicationController
-  before_action :set_client, only: [:show, :edit, :update, :destroy]
+  before_action :set_client, only: [ :edit, :update, :destroy]
 
   # GET /clients
   def index
@@ -8,6 +8,9 @@ class ClientsController < ApplicationController
 
   # GET /clients/1
   def show
+    if @client.nil? && current_client
+      @client = current_client
+    end
   end
 
   # GET /clients/new

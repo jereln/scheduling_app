@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
+<p><strong>Username:</strong>
+<%= @client.username %></p>
+<p><strong>Name:</strong>
+<%= @client.first_name %>
+<%= @client.last_name %></p>
+<p><strong>Email:</strong>
+<%= @client.email %></p>
 
-<p><%= @client.username %></p>
-<p><%= @client.first_name %></p>
-<p><%= @client.last_name %></p>
-<p><%= @client.email %></p>
-
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+<%= link_to 'Edit my account info', edit_client_registration_path %>
