@@ -6,14 +6,6 @@ class ApplicationController < ActionController::Base
 
   include Pundit
 
-  def pundit_user
-    if current_therapist
-      current_therapist
-    else
-      current_client
-    end
-  end
-
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
   private
