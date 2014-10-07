@@ -4,10 +4,11 @@ Rails.application.routes.draw do
   devise_for :therapists
   devise_for :clients
   resources :appointments
-
   resources :therapists
-
   resources :clients
+  get '/account', to: 'clients#show'
+  get '/account/edit', to: 'devise/registrations#edit'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
