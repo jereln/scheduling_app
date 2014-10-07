@@ -12,5 +12,17 @@ feature 'setting appointments' do
     page.must_have_content 'Appointment was successfully created.'
   end
 
+  scenario 'a client cannnot set an appointment' do
+    sign_in_client
 
+    visit new_appointment_path
+    page.must_have_content 'Sign in'
+  end
+
+  scenario 'a client cannot see a New Appointment link' do
+    sign_in_client
+
+    visit appointments_path
+    page.wont_have_content 'New Appointment'
+  end
 end

@@ -10,6 +10,7 @@
   <tbody>
     <% @appointments.each do |appointment| %>
       <tr>
+        <td><%= appointment.date %></td>
         <td><%= link_to 'Show', appointment %></td>
         <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
         <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -19,5 +20,6 @@
 </table>
 
 <br>
-
-<%= link_to 'New Appointment', new_appointment_path %>
+<% if current_therapist %>
+  <%= link_to 'New Appointment', new_appointment_path %>
+<% end %>

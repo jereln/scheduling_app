@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141006194214) do
+ActiveRecord::Schema.define(version: 20141007162614) do
 
   create_table "appointments", force: true do |t|
     t.integer  "client_id"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20141006194214) do
     t.date     "date"
     t.time     "start_time"
     t.time     "end_time"
-    t.boolean  "reserved"
+    t.boolean  "reserved",     default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20141006194214) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "name"
   end
 
   add_index "clients", ["email"], name: "index_clients_on_email", unique: true
