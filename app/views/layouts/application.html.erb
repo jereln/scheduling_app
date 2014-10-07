@@ -7,7 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div id='user_header'>
+    <% if current_client.present? %>
+    Signed in as <%= current_client.username %> <br>
+    <%= link_to 'Sign Out', destroy_client_session_path, method: :delete %>
+    <% else %>
+    <%= link_to 'Sign In', new_client_session_path %> |
+    <%= link_to 'Sign Up', new_client_registration_path %> |
+    <% end %>
+  </div>
 <%= yield %>
 
 </body>
