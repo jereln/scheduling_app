@@ -1,11 +1,13 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+therapist:
+  username: mary_j
+  full_name: mary johnson
+  email: mary@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  role: therapist
 
-# This model initially had no columns defined.  If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+client:
+  username: felipe
+  full_name: felipe martinez
+  email: felipe@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  role: client

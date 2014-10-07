@@ -8,13 +8,13 @@
 </head>
 <body>
   <div id='user_header'>
-    <% if current_client.present? %>
+    <% if user_signed_in? %>
     Signed in as <%= current_client.username %> <br>
-    <%= link_to 'Sign Out', destroy_client_session_path, method: :delete %>
+    <%= link_to 'Sign Out', sign_out_path, method: :delete %>
     <%= link_to 'My account', account_path %>
     <% else %>
-    <%= link_to 'Sign In', new_client_session_path %> |
-    <%= link_to 'Sign Up', new_client_registration_path %> |
+    <%= link_to 'Sign In', sign_in_path %> |
+    <%= link_to 'Sign Up', sign_up_path %> |
     <% end %>
   </div>
 <%= yield %>

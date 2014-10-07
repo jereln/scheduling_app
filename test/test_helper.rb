@@ -14,16 +14,10 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
-def sign_in_therapist
-  visit new_therapist_session_path
-  fill_in 'Email', with: therapists(:therapist).email
+def sign_in_user(user)
+  visit sign_up_path
+  fill_in 'Email', with: users(user).email
   fill_in 'Password', with: 'password'
   click_on 'Sign in'
 end
 
-def sign_in_client
-  visit new_client_session_path
-  fill_in 'Email', with: clients(:client).email
-  fill_in 'Password', with: 'password'
-  click_on 'Sign in'
-end

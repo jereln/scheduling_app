@@ -8,4 +8,12 @@ class User < ActiveRecord::Base
   has_many :therapists, through: :client_appts
   has_many :therapist_appts, class_name: 'Appointment', foreign_key: 'therapist_id'
   has_many :clients, through: :therapist_appts
+
+  def therapist?
+    user.role == 'therapist'
+  end
+
+  def client?
+    user.role == 'client'
+  end
 end
