@@ -28,12 +28,6 @@ feature 'viewing appointments' do
     page.must_have_content 'Listing appointments'
   end
 
-  scenario 'a client can view their own appointment' do
-    sign_in_client
-    visit appointment_path(appointments(:reserved_appointment))
-    page.must_have_content clients(:client).name
-  end
-
   scenario 'a client can see an available appointment show page' do
     sign_in_client
     visit appointment_path(appointments(:available_appointment))

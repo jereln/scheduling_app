@@ -12,7 +12,6 @@ class AppointmentPolicy < ApplicationPolicy
   def show?
     return true if record.reserved == false
     return true if user.class == Therapist
-    return true if record.client_id == user.id
     false
   end
 end
