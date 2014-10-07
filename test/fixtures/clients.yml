@@ -1,5 +1,0 @@
-client:
-  id: 2
-  name: jim
-  email: jim@example.com
-  encrypted_password: <%= Client.new.send(:password_digest, 'password') %>

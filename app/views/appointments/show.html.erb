@@ -1,12 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<% if @appointment.reserved %>
-  <%= Client.find(@appointment.client_id).name %>
-<% end %>
-<%= @appointment.date %>
-<%= @appointment.start_time %> - <%= @appointment.end_time %>
+<div>
+  <% if @appointment.reserved %>
+    <%= Client.find(@appointment.client_id).name %>
+  <% end %>
+</div>
+
+<div>
+  <%= @appointment.date %>
+</div>
+
+<div>
+  <%= @appointment.start_time %> - <%= @appointment.end_time %>
+</div>
 
 <%= link_to 'Cancel Appointment', @appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
+|
 <%= link_to 'Edit', edit_appointment_path(@appointment) %> |
 <%= link_to 'Back', appointments_path %>

@@ -6,7 +6,7 @@ class CreateAppointments < ActiveRecord::Migration
       t.date :date
       t.time :start_time
       t.time :end_time
-      t.boolean :reserved
+      t.boolean :reserved, default: false
 
       t.timestamps
     end

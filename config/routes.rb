@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'appointments#index'
 
-  devise_for :therapists
-  devise_for :clients
   resources :appointments
   resources :therapists
   resources :clients
