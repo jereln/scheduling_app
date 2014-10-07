@@ -11,6 +11,7 @@ gem 'devise'
 gem 'pundit'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'jquery-ui-rails'
+gem 'figaro'
 
 group :development do
   gem 'spring'
