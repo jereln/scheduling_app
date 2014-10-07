@@ -10,8 +10,10 @@ class AppointmentPolicy < ApplicationPolicy
   end
 
   def show?
-    return true if record.reserved == false
-    return true if user.therapist?
-    false
+    user.therapist? || record.reserved == false
+  end
+
+  def create?
+    user.therapist?
   end
 end
