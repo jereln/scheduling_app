@@ -6,6 +6,7 @@ therapist:
   role: therapist
 
 client:
+  id: 2
   username: felipe
   full_name: felipe martinez
   email: felipe@example.com

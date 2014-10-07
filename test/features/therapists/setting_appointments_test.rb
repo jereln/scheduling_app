@@ -16,7 +16,6 @@ feature 'setting appointments' do
     sign_in(:client)
 
     visit new_appointment_path
-    save_and_open_page
     page.must_have_content 'Listing appointments'
   end
 

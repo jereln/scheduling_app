@@ -2,7 +2,7 @@
 
 <div>
   <% if @appointment.reserved %>
-    <%= Client.find(@appointment.client_id).name %>
+    <%= User.find(@appointment.client_id).full_name %>
   <% end %>
 </div>
 
