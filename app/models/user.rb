@@ -13,11 +13,11 @@ class User < ActiveRecord::Base
 
 
   def therapist?
-    user.role == 'therapist'
+    role == 'therapist'
   end
 
   def client?
-    user.role == 'client'
+    role == 'client'
   end
 
   def self.find_for_database_authentication(warden_conditions)
