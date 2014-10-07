@@ -3,9 +3,7 @@ Rails.application.routes.draw do
   root 'appointments#index'
 
   resources :appointments
-  resources :therapists
-  resources :clients
-  get '/account', to: 'clients#show'
+  get '/account', to: 'users#show'
   get '/account/edit', to: 'devise/registrations#edit'
 
 
