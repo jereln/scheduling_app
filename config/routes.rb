@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end
 
   resources :appointments
-  get '/account', to: 'clients#show'
+
+  get '/account', to: 'users#show'
   get '/account/edit', to: 'devise/registrations#edit'
 end
