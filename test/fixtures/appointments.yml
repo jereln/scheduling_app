@@ -1,11 +1,20 @@
 reserved_appointment:
-  date: '10/29/1014'
-  end_time: '3:00pm'
-  start_time: '9:00pm'
+  date: <%= Date.today.to_s %>
+  end_time: 3:00pm
+  start_time: 9:00pm
   reserved: true
+  client_id: 2
+
 
 available_appointment:
-  date: '10/30/1014'
-  end_time: '3:00pm'
-  start_time: '9:00pm'
+  date: <%= Date.tomorrow.to_s %>
+  end_time: 3:00pm
+  start_time: 9:00pm
   reserved: false
+
+new_appointment:
+  date: <%= Date.tomorrow.to_s %>
+  end_time: 3:00pm
+  start_time: 9:00pm
+  reserved: true
+  client_id: 5

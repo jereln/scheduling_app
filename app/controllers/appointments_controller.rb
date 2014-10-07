@@ -4,11 +4,12 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments
   def index
-    @appointments = Appointment.all
+    @appointments = policy_scope(Appointment)
   end
 
   # GET /appointments/1
   def show
+    authorize @appointment
   end
 
   # GET /appointments/new

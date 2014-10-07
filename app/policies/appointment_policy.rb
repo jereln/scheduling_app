@@ -4,12 +4,15 @@ class AppointmentPolicy < ApplicationPolicy
       if user.class == Therapist
         scope.all
       else
-        scope.where(reserved: true)
+        scope.where(reserved: false)
       end
     end
   end
 
-  def create?
-    current_therapist
+  def show?
+    return true if record.reserved == false
+    return true if user.class == Therapist
+    return true if record.client_id == user.id
+    false
   end
 end
