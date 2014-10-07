@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+<p><strong>Username:</strong>
+<%= @user.username %></p>
+<p><strong>Name:</strong>
+<%= @user.full_name %>
+<p><strong>Email:</strong>
+<%= @user.email %></p>
+
+<%= link_to 'Edit my account info', edit_user_registration_path %>
