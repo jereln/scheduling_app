@@ -11,6 +11,7 @@ gem 'devise'
 gem 'pundit'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'jquery-ui-rails'
+gem 'jquery-timepicker-rails'
 gem 'figaro'
 gem 'jquery-turbolinks'
 

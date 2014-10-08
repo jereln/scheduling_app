@@ -9,6 +9,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   def show
     authorize @appointment
+    @user = current_user
   end
 
   # GET /appointments/new
@@ -29,7 +30,7 @@ class AppointmentsController < ApplicationController
 
     if @appointment.save
       redirect_to @appointment, notice: 'Appointment was successfully created.'
-      AppMailer.new_appointment_email(current_user, @appointment).deliver
+      # AppMailer.new_appointment_email(current_user, @appointment).deliver
     else
       render :new
     end
@@ -37,7 +38,6 @@ class AppointmentsController < ApplicationController
 
   # PATCH/PUT /appointments/1
   def update
-    authorize @appointment
     if @appointment.update(appointment_params)
       redirect_to @appointment, notice: 'Appointment was successfully updated.'
     else

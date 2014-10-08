@@ -13,17 +13,19 @@
 </div>
 
 <div>
- <strong>Client</strong> <%= @appointment.client.full_name %>
-</div>
-
-<div>
  <strong>reserved?</strong> <%= @appointment.reserved %>
 </div>
 
+<% if @user.therapist? && @appointment.client_id != nil %>
+  <div>
+   <strong>Therapist</strong> <%= @appointment.client.full_name %>
+  </div>
+<% end %>
+
 <% if @appointment.reserved %>
-  <%= button_to 'Cancel Appointment', appointment_path(@appointment, appointment: {reserved: false}), method: :put, data: {confirm: 'Are you sure?'}%>
+  <%= button_to 'Cancel Appointment', appointment_path(@appointment, appointment: {reserved: false, client_id: nil}), method: :put, data: {confirm: 'Are you sure?'}%>
   <% else %>
-  <%= button_to 'Reserve Appointment', appointment_path(@appointment, appointment: {reserved: true}), method: :put, data: {confirm: 'Are you sure?'}%>
+  <%= button_to 'Reserve Appointment', appointment_path(@appointment, appointment: {reserved: true, client_id: current_user.id}), method: :put, data: {confirm: 'Are you sure?'}%>
 <% end %>
 
 <% if policy(@appointment).update? %>

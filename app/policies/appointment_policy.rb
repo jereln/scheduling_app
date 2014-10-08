@@ -10,7 +10,7 @@ class AppointmentPolicy < ApplicationPolicy
   end
 
   def show?
-    user.therapist? || record.reserved == false
+    user.therapist? || record.reserved == false || user.id == record.client_id
   end
 
   def create?
@@ -19,9 +19,5 @@ class AppointmentPolicy < ApplicationPolicy
 
   def destroy?
     user.therapist? || user.id == record.client_id
-  end
-
-  def update?
-    user.therapist?
   end
 end
