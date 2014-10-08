@@ -9,6 +9,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   def show
     authorize @appointment
+    @user = current_user
   end
 
   # GET /appointments/new
@@ -36,7 +37,6 @@ class AppointmentsController < ApplicationController
 
   # PATCH/PUT /appointments/1
   def update
-    authorize @appointment
     if @appointment.update(appointment_params)
       if @appointment.reserved == true
         send_reservation_emails

@@ -6,14 +6,15 @@
   <%= @user.full_name %>
 <p><strong>Email:</strong>
   <%= @user.email %></p>
-
+<%= link_to 'Edit my account info', edit_user_registration_path %>
+<h2>Your Reserved Appointments</h2>
 <% @appointments.each do |appt| %>
   <p><strong>Date:</strong>
     <%= appt.date %></p>
   <p><strong>Time:</strong>
-    <%= appt.start_time %> - <%= appt.end_time %></p>
-  <p>%= link_to 'Cancel Appointment', appointment_path(@appointment, appointment: {reserved: false}), method: :patch, data: {confirm: 'Are you sure?'} %></p>
+    <%= appt.start_time.strftime("%l:%M") %> - <%= appt.end_time.strftime("%l:%M%p") %></p>
+  <p><strong>Therapist:</strong>
+    <%= appt.therapist.full_name %></p>
+    <%= button_to 'Cancel Appointment', appointment_path(appt, appointment: {reserved: false, client_id: nil}), method: :put, data: {confirm: 'Are you sure?'}%>
 <% end %>
-
-<%= link_to 'Edit my account info', edit_user_registration_path %>
 
