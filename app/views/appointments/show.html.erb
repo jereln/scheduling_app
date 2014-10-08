@@ -21,14 +21,10 @@
 </div>
 
 
-<% if policy(@appointment).destroy? %>
-  <%= link_to 'Cancel Appointment', @appointment, method: :delete,
-      data: { confirm: 'Are you sure?' } %>
-  |
-<% end %>
-
-<% if @appointment.reserved == false %>
-  <%= button_to 'Reserve Appointment', appointment_path(@appointment, appointment: {reserved: true}), method: :put, data: {confirm: 'Are you sure?'}%>
+<% if @appointment.reserved %>
+  <%= link_to 'Cancel Appointment', appointment_path(@appointment, appointment: {reserved: false}), method: :patch, data: {confirm: 'Are you sure?'} %>
+<% else %>
+  <%= button_to 'Reserve Appointment', appointment_path(@appointment, appointment: {reserved: true}), method: :patch, data: {confirm: 'Are you sure?'}%>
   |
 <% end %>
 

@@ -38,8 +38,12 @@ class AppointmentsController < ApplicationController
   def update
     authorize @appointment
     if @appointment.update(appointment_params)
+      if @appointment.reserved == true
+        send_reservation_emails
+      else
+        user.therapist? ? send_therapist_cancellation_emails : send_client_cancellation_emails
+      end
       redirect_to @appointment, notice: 'Appointment was successfully updated.'
-      send_reservation_emails
     else
       render :edit
     end
@@ -49,8 +53,6 @@ class AppointmentsController < ApplicationController
   def destroy
     @appointment.destroy
     authorize @appointment
-    current_user.therapist? ?
-      send_therapist_cancellation_emails : send_client_cancellation_emails
     redirect_to appointments_url,
       notice: 'Appointment was successfully destroyed.'
   end

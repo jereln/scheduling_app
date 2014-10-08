@@ -12,7 +12,7 @@
     <%= appt.date %></p>
   <p><strong>Time:</strong>
     <%= appt.start_time %> - <%= appt.end_time %></p>
-  <p><%= link_to 'Cancel appointment', appointment_path(appt), method: :delete %></p>
+  <p>%= link_to 'Cancel Appointment', appointment_path(@appointment, appointment: {reserved: false}), method: :patch, data: {confirm: 'Are you sure?'} %></p>
 <% end %>
 
 <%= link_to 'Edit my account info', edit_user_registration_path %>

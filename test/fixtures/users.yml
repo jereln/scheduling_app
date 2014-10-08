@@ -1,4 +1,5 @@
 therapist:
+  id: 1
   username: mary_j
   full_name: mary johnson
   email: mary@example.com

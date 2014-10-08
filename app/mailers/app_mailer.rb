@@ -1,6 +1,7 @@
-class AppMailer < ActionMailer
+class AppMailer < ActionMailer::Base
   def client_reservation_email(user, appointment)
-    set_variables
+    @user = user
+    @appointment = appointment
     mail(
       from: 'info@scheduler.com',
       to: user.email,
@@ -9,7 +10,8 @@ class AppMailer < ActionMailer
   end
 
   def therapist_reservation_email(user, appointment)
-    set_variables
+    @user = user
+    @appointment = appointment
     mail(
       from: 'info@scheduler.com',
       to: user.email,
@@ -18,54 +20,42 @@ class AppMailer < ActionMailer
   end
 
   def client_cancellation_for_client(user, appointment)
-   cancellation_confirmation
-  end
-
-  def client_cancellation_for_therapist(user, appointment)
-    cancellation_notice
-  end
-
-  def therapist_cancellation_for_therapist(user, appointment)
-    cancellation_confirmation
-  end
-
-  def therapist_cancellation_for_client(user, appointment)
-    cancellation_notice
-  end
-
-  private
-
-  def cancellation_confirmation(user, appointment)
-    set_variables
+    @user = user
+    @appointment = appointment
     mail(
-      from: 'info@scheduler.com'
-      to: @user.email
+      from: 'info@scheduler.com',
+      to: user.email,
       subject: 'Apppointment cancellation confirmation'
       )
   end
 
-  def cancellation_notice
-    set_variables
+  def client_cancellation_for_therapist(user, appointment)
+    @user = user
+    @appointment = appointment
     mail(
-      from: 'info@scheduler.com'
-      to: @user.email
+      from: 'info@scheduler.com',
+      to: appointment.therapist.email,
       subject: 'Apppointment cancellation notice'
       )
   end
 
-  def set_variables
-    @user = @user
+  def therapist_cancellation_for_therapist(user, appointment)
+    @user = user
     @appointment = appointment
+    mail(
+      from: 'info@scheduler.com',
+      to: user.email,
+      subject: 'Apppointment cancellation confirmation'
+      )
+  end
+
+  def therapist_cancellation_for_client(user, appointment)
+    @user = user
+    @appointment = appointment
+    mail(
+      from: 'info@scheduler.com',
+      to: appointment.client.email,
+      subject: 'Apppointment cancellation notice'
+      )
   end
 end
-
-
-
-
-
-
-
-
-
-
-
