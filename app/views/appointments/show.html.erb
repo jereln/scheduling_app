@@ -5,7 +5,7 @@
 </div>
 
 <div>
-  <strong>time</strong> <%= @appointment.start_time %> - <%= @appointment.end_time %>
+  <strong>time</strong> <%= @appointment.start_time.strftime("%l:%M") %> - <%= @appointment.end_time.strftime("%l:%M") %>
 </div>
 
 <div>
@@ -23,8 +23,8 @@
 <% end %>
 
 <% if @appointment.reserved %>
-  <%= button_to 'Cancel Appointment', appointment_path(@appointment, appointment: {reserved: false, client_id: nil}), method: :put, data: {confirm: 'Are you sure?'}%>
-  <% else %>
+  <%= button_to 'Cancel Appointment', appointment_path(@appointment, appointment: {reserved: false, client_id: current_user.id}), method: :put, data: {confirm: 'Are you sure?'}%>
+<% else %>
   <%= button_to 'Reserve Appointment', appointment_path(@appointment, appointment: {reserved: true, client_id: current_user.id}), method: :put, data: {confirm: 'Are you sure?'}%>
 <% end %>
 
