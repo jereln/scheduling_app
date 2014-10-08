@@ -12,6 +12,7 @@ gem 'pundit'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'jquery-ui-rails'
 gem 'figaro'
+gem 'jquery-turbolinks'
 
 
 group :development do
