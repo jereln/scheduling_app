@@ -14,4 +14,16 @@
  *= require jquery-ui/datepicker
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+.signed-in-as {
+    color: white;
+    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: normal;
+    text-transform: none;
+    line-height: 45px;
+    padding 15 15px;
+}

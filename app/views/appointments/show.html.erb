@@ -5,7 +5,7 @@
 </div>
 
 <div>
-  <strong>time</strong> <%= @appointment.start_time.strftime("%l:%M") %> - <%= @appointment.end_time.strftime("%l:%M") %>
+  <strong>time</strong> <%= @appointment.start_time.strftime("%l:%M") %> - <%= @appointment.end_time.strftime("%l:%M%p") %>
 </div>
 
 <div>
@@ -18,7 +18,7 @@
 
 <% if @user.therapist? && @appointment.client_id != nil %>
   <div>
-   <strong>Therapist</strong> <%= @appointment.client.full_name %>
+   <strong>Client</strong> <%= @appointment.client.full_name %>
   </div>
 <% end %>
 
