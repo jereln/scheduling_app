@@ -19,6 +19,7 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/1/edit
   def edit
+    authorize @appointment
   end
 
   # POST /appointments
@@ -35,6 +36,7 @@ class AppointmentsController < ApplicationController
 
   # PATCH/PUT /appointments/1
   def update
+    authorize @appointment
     if @appointment.update(appointment_params)
       redirect_to @appointment, notice: 'Appointment was successfully updated.'
     else
