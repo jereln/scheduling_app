@@ -29,6 +29,7 @@ class AppointmentsController < ApplicationController
 
     if @appointment.save
       redirect_to @appointment, notice: 'Appointment was successfully created.'
+      AppMailer.new_appointment_email(current_user, @appointment).deliver
     else
       render :new
     end
