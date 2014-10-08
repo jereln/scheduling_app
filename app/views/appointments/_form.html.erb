@@ -22,9 +22,9 @@
     <%= f.label :reserved %>
     <%= f.check_box :reserved %>
     <%= f.label :client_id %>
-    <%= f.select :client_id, User.all.collect {|p| p.full_name}  %>
+    <%= f.select :client_id, User.all.collect { |o| [o.full_name, o.id] } %>
     <%= f.label :therapist_id %>
-    <%= f.select :therapist_id, User.all.collect {|p| p.full_name}  %>
+    <%= f.select :therapist_id, User.all.collect { |o| [o.full_name, o.id] } %>
     <%= f.submit %>
   </div>
 <% end %>

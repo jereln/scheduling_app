@@ -6,8 +6,8 @@ class UsersController < ApplicationController
   # end
 
   def show
-    @appointments = @user.client_appts
     @user = current_user
+    @appointments = @user.therapist? ? @user.therapist_appts : @user.client_appts
   end
 
   # def new
