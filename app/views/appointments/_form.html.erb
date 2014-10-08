@@ -19,6 +19,12 @@
     <%= f.time_field :start_time %>
     <%= f.label :end_time %>
     <%= f.time_field :end_time %>
+    <%= f.label :reserved %>
+    <%= f.check_box :reserved %>
+    <%= f.label :client_id %>
+    <%= f.select :client_id, User.all.collect {|p| p.full_name}  %>
+    <%= f.label :therapist_id %>
+    <%= f.select :therapist_id, User.all.collect {|p| p.full_name}  %>
     <%= f.submit %>
   </div>
 <% end %>
