@@ -19,6 +19,6 @@
 </table>
 
 <br>
-<% if policy_scope(@appointments) %>
+<% if policy(@appointments).create? %>
   <%= link_to 'New Appointment', new_appointment_path %>
 <% end %>

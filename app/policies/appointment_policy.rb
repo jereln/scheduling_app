@@ -1,7 +1,7 @@
 class AppointmentPolicy < ApplicationPolicy
   class Scope < Struct.new(:user, :scope)
     def resolve
-      if user.therapist?
+      if user && user.therapist?
         scope.all
       else
         scope.where(reserved: false)
@@ -10,8 +10,18 @@ class AppointmentPolicy < ApplicationPolicy
   end
 
   def show?
-    return true if record.reserved == false
-    return true if user.therapist?
-    false
+    user.therapist? || record.reserved == false
+  end
+
+  def create?
+    user.therapist?
+  end
+
+  def destroy?
+    user.therapist? || user.id == record.client_id
+  end
+
+  def update?
+    user.therapist?
   end
 end

@@ -1,9 +1,19 @@
 <p id="notice"><%= notice %></p>
+
 <p><strong>Username:</strong>
-<%= @user.username %></p>
+  <%= @user.username %></p>
 <p><strong>Name:</strong>
-<%= @user.full_name %>
+  <%= @user.full_name %>
 <p><strong>Email:</strong>
-<%= @user.email %></p>
+  <%= @user.email %></p>
+
+<% @appointments.each do |appt| %>
+  <p><strong>Date:</strong>
+    <%= appt.date %></p>
+  <p><strong>Time:</strong>
+    <%= appt.start_time %> - <%= appt.end_time %></p>
+  <p><%= link_to 'Cancel appointment', appointment_path(appt), method: :delete %></p>
+<% end %>
 
 <%= link_to 'Edit my account info', edit_user_registration_path %>
+

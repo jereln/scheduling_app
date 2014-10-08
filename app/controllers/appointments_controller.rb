@@ -1,6 +1,5 @@
 class AppointmentsController < ApplicationController
   before_action :set_appointment, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
 
   # GET /appointments
   def index
@@ -15,18 +14,22 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   def new
     @appointment = Appointment.new
+    authorize @appointment
   end
 
   # GET /appointments/1/edit
   def edit
+    authorize @appointment
   end
 
   # POST /appointments
   def create
     @appointment = Appointment.new(appointment_params)
+    authorize @appointment
 
     if @appointment.save
       redirect_to @appointment, notice: 'Appointment was successfully created.'
+      AppMailer.new_appointment_email(current_user, @appointment).deliver
     else
       render :new
     end
@@ -34,6 +37,7 @@ class AppointmentsController < ApplicationController
 
   # PATCH/PUT /appointments/1
   def update
+    authorize @appointment
     if @appointment.update(appointment_params)
       redirect_to @appointment, notice: 'Appointment was successfully updated.'
     else
@@ -44,6 +48,7 @@ class AppointmentsController < ApplicationController
   # DELETE /appointments/1
   def destroy
     @appointment.destroy
+    authorize @appointment
     redirect_to appointments_url, notice: 'Appointment was successfully destroyed.'
   end
 
