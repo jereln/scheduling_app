@@ -1,10 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <div>
-  <% if @appointment.reserved %>
-    <%= User.find(@appointment.client_id).full_name %>
-  <% end %>
-
   <strong>Date:</strong> <%= @appointment.date %>
 </div>
 
@@ -13,13 +9,21 @@
 </div>
 
 <div>
+ <strong>Therapist</strong> <%= @appointment.therapist.full_name %>
+</div>
+
+<div>
+ <strong>Client</strong> <%= @appointment.client.full_name %>
+</div>
+
+<div>
  <strong>reserved?</strong> <%= @appointment.reserved %>
 </div>
 
 <% if @appointment.reserved %>
-  <%= link_to 'Cancel Appointment', @appointment, method: :delete,
-      data: { confirm: 'Are you sure?' } %>
-  |
+  <%= button_to 'Cancel Appointment', appointment_path(@appointment, appointment: {reserved: false}), method: :put, data: {confirm: 'Are you sure?'}%>
+  <% else %>
+  <%= button_to 'Reserve Appointment', appointment_path(@appointment, appointment: {reserved: true}), method: :put, data: {confirm: 'Are you sure?'}%>
 <% end %>
 
 <% if policy(@appointment).update? %>
@@ -27,4 +31,4 @@
   |
 <% end %>
 
-<%= link_to 'Back', appointments_path %>
+<%= link_to 'Back', root_path %>
