@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [ :show, :edit, :update, :destroy]
+  before_action :set_user, only: [ :edit, :update, :destroy]
 
   # def index
   #   @users = User.all
@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @appointments = @user.client_appts
+    @user = current_user
   end
 
   # def new

@@ -4,14 +4,16 @@
   <% if @appointment.reserved %>
     <%= User.find(@appointment.client_id).full_name %>
   <% end %>
+
+  <strong>Date:</strong> <%= @appointment.date %>
 </div>
 
 <div>
-  <%= @appointment.date %>
+  <strong>time</strong> <%= @appointment.start_time %> - <%= @appointment.end_time %>
 </div>
 
 <div>
-  <%= @appointment.start_time %> - <%= @appointment.end_time %>
+ <strong>reserved?</strong> <%= @appointment.reserved %>
 </div>
 
 <% if @appointment.reserved %>
