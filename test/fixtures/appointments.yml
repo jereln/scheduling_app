@@ -4,6 +4,7 @@ reserved_appointment:
   start_time: 9:00pm
   reserved: true
   client_id: 2
+  therapist_id: 1
 
 
 available_appointment:

@@ -18,6 +18,6 @@ class AppointmentPolicy < ApplicationPolicy
   end
 
   def destroy?
-    user.therapist? || user.id == record.client_id
+    user.therapist?
   end
 end

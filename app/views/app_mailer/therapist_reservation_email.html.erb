@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <p><%= @user.full_name %>,</p>
+  <p>
+  <%= @appointment.client.full_name %> reserved an appointment with you on <%= @appointment.date %> at
+  <%= @appointment.start_time %>.
+  </p>
+</body>
+</html>
