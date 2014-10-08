@@ -13,11 +13,13 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'jquery-ui-rails'
 gem 'figaro'
 
+
 group :development do
   gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
+  gem 'letter_opener'
 end
 
 group :test do
