@@ -29,7 +29,6 @@ class AppointmentsController < ApplicationController
 
     if @appointment.save
       redirect_to @appointment, notice: 'Appointment was successfully created.'
-      AppMailer.new_appointment_email(current_user, @appointment).deliver
     else
       render :new
     end
@@ -40,6 +39,7 @@ class AppointmentsController < ApplicationController
     authorize @appointment
     if @appointment.update(appointment_params)
       redirect_to @appointment, notice: 'Appointment was successfully updated.'
+      send_reservation_emails
     else
       render :edit
     end
@@ -49,17 +49,50 @@ class AppointmentsController < ApplicationController
   def destroy
     @appointment.destroy
     authorize @appointment
-    redirect_to appointments_url, notice: 'Appointment was successfully destroyed.'
+    current_user.therapist? ?
+      send_therapist_cancellation_emails : send_client_cancellation_emails
+    redirect_to appointments_url,
+      notice: 'Appointment was successfully destroyed.'
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_appointment
-      @appointment = Appointment.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def appointment_params
-      params.require(:appointment).permit(:date, :start_time, :end_time, :reserved, :therapist_id, :client_id)
-    end
+  def set_appointment
+    @appointment = Appointment.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def appointment_params
+    params.require(:appointment).permit(:date, :start_time, :end_time, :reserved, :therapist_id, :client_id)
+  end
+
+  def send_reservation_emails
+    AppMailer.client_reservation_email(current_user, @appointment).deliver
+    AppMailer.therapist_reservation_email(
+                                          @appointment.therapist,
+                                          @appointment
+                                          ).deliver
+  end
+
+  def send_therapist_cancellation_emails
+    AppMailer.therapist_cancellation_for_client(
+                                                @appointment.client,
+                                                @appointment
+                                                ).deliver
+    AppMailer.therapist_cancellation_for_therapist(
+                                                  current_user,
+                                                   @appointment
+                                                   ).deliver
+  end
+
+  def send_client_cancellation_emails
+    AppMailer.client_cancellation_for_therapist(
+                                                @appointment.therapist,
+                                                @appointment
+                                                ).deliver
+    AppMailer.client_cancellation_for_client(
+                                             current_user,
+                                             @appointment
+                                             ).deliver
+  end
 end

@@ -16,7 +16,7 @@
  <strong>reserved?</strong> <%= @appointment.reserved %>
 </div>
 
-<% if @appointment.reserved %>
+<% if policy(@appointment).destroy? %>
   <%= link_to 'Cancel Appointment', @appointment, method: :delete,
       data: { confirm: 'Are you sure?' } %>
   |
