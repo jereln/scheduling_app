@@ -5,4 +5,4 @@ jQuery ->
   $('#appointment_date').datepicker({ dateFormat: "yy-mm-dd" });
   $('#appointment_start_time').timepicker({ 'scrollDefault': 'now' });
   $('#appointment_end_time').timepicker({ 'scrollDefault': 'now' });
-
+  $('#appointment_reservation_time').timepicker({ 'scrollDefault': 'now' });

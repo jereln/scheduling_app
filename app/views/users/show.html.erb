@@ -7,21 +7,36 @@
 </section>
 <p id="notice"><%= notice %></p>
 
-<p><strong>Username:</strong>
-  <%= @user.username %></p>
-<p><strong>Name:</strong>
-  <%= @user.full_name %>
-<p><strong>Email:</strong>
-  <%= @user.email %></p>
-<%= link_to 'Edit my account info', edit_user_registration_path %>
-<h2>Your Reserved Appointments</h2>
-<% @appointments.each do |appt| %>
-  <p><strong>Date:</strong>
-    <%= appt.date %></p>
-  <p><strong>Time:</strong>
-    <%= appt.start_time.strftime("%l:%M") %> - <%= appt.end_time.strftime("%l:%M%p") %></p>
-  <p><strong>Therapist:</strong>
-    <%= appt.therapist.full_name %></p>
-    <%= button_to 'Cancel Appointment', appointment_path(appt, appointment: {reserved: false, client_id: current_user.id}), method: :put, data: {confirm: 'Are you sure?'} %>
-<% end %>
+<div class="row">
+  <div class="small-2 large-4 columns">
+    <h2>Your Account Info</h2>
+    <p><strong>Username:</strong>
+      <%= @user.username %><br>
+    <strong>Name:</strong>
+      <%= @user.full_name %><br>
+    <strong>Email:</strong>
+      <%= @user.email %></p>
+    <%= link_to 'Edit your account info', edit_user_registration_path%>
+  </div>
+  <div class="small-4 large-4 columns"></div>
+  <div class="small-6 large-4 columns">
+    <h2>Your Reserved Appointments</h2>
+    <% @appointments.each do |appt| %>
+      <% if appt.client_id != nil %>
+        <p><strong>Date:</strong><%= appt.date %><br>
+        <strong>Time:</strong>
+          <%= appt.reservation_time.strftime("%l:%M%p") %><br>
+        <% if current_user.role != 'therapist' %><strong>Therapist:</strong>
+            <%= appt.therapist.full_name %></p>
+        <% else %>
+            <strong>Client:</strong>
+              <%= appt.client.full_name %></p>
+        <% end %>
+          <%= button_to 'Cancel Appointment', appointment_path(appt, appointment: {reserved: false, client_id: current_user.id}), method: :put, data: {confirm: 'Are you sure?'} %>
+          <hr>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
 

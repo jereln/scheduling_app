@@ -18,20 +18,9 @@
 
  */
 
+@import 'foundation-icons';
+
 .signed-in-as {
-    color: white;
-    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-    display: block;
-    font-size: 0.8125rem;
-    font-weight: normal;
-    text-transform: none;
-    line-height: 45px;
-    padding: 15 15px;
-}
-
-@import 'foundation-icons'
-
- .signed-in-as {
   color: white;
   display: block;
   font-size: 0.8125rem;
@@ -100,6 +89,18 @@ h1 {
   transition: border 0.2s ease-in-out;
 }
 
+.top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
+  background: transparent;
+}
+
+.top-bar-section .dropdown li {
+  background: transparent;
+}
+
+.top-bar-section ul li:hover:not(.has-form) > a {
+  background: transparent;
+}
+
 .hero-text {
   padding-top: 30px;
 }
@@ -121,4 +122,21 @@ h1 {
   margin-right: auto;
   margin-left: auto;
   font-family: 'Droid Serif', serif;
+}
+
+.row {
+  h2 {
+    font-family: 'Droid Serif', serif;
+  }
+
+  p, input[type="submit"] {
+    font-size: 18px ;
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+.row a {
+  font-size: 18px ;
+  font-family: 'Lato', sans-serif;
+  text-decoration: underline;
 }

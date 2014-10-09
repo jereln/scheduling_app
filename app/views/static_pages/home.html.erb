@@ -2,7 +2,11 @@
   <%= render 'layouts/nav' %>
     <div class="hero-text">
         <h1>Welcome to my awesome website</h1><br>
-        <h3>Sign in and select an available slot to get started!</h3>
+        <% if user_signed_in? %>
+          <h3>Select an available slot to reserve</h3>
+        <% else%>
+          <h3>Sign in or create an account to get started</h3>
+        <% end %>
       </div>
   </div>
 </section>
