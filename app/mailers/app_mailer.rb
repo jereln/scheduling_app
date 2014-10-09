@@ -40,6 +40,7 @@ class AppMailer < ActionMailer::Base
   def client_cancellation_for_therapist(user, appointment)
     @user = user
     @appointment = appointment
+
     mail(
       from: 'info@scheduler.com',
       to: appointment.therapist.email,
@@ -57,7 +58,7 @@ class AppMailer < ActionMailer::Base
       )
   end
 
-  def therapist_cancellation_for_client(user, appointment)
+  def therapist_cancellation_for_client(appointment)
     @appointment = appointment
     @user = User.find(appointment.cancelled_id)
     mail(
@@ -73,7 +74,7 @@ class AppMailer < ActionMailer::Base
   end
 
   def therapist_cancellation(user, appointment)
-    AppMailer.therapist_cancellation_for_client(appointment.client, appointment).deliver
+    AppMailer.therapist_cancellation_for_client(appointment).deliver
     AppMailer.therapist_cancellation_for_therapist(user, appointment).deliver
   end
 

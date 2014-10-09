@@ -7,7 +7,7 @@ feature 'deleting an appointment' do
 
   scenario 'a therapist deletes an appointment' do
     visit appointment_path(appointments(:available_appointment))
-    click_button 'Delete Appointment'
+    click_link 'Delete Appointment'
     page.must_have_content 'Listing appointments'
   end
 

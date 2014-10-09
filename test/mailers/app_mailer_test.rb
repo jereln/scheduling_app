@@ -2,7 +2,8 @@ require 'test_helper'
 
 class AppMailerTest < ActionMailer::TestCase
   test "reservation to client" do
-    email = AppMailer.client_reservation_email(users(:client),
+    email = AppMailer.client_reservation_email(
+                                            users(:client),
                                             appointments(:reserved_appointment)
                                             ).deliver
     assert_not ActionMailer::Base.deliveries.empty?
@@ -13,7 +14,8 @@ class AppMailerTest < ActionMailer::TestCase
   end
 
   test "reservation to therapist" do
-    email = AppMailer.therapist_reservation_email(users(:therapist),
+    email = AppMailer.therapist_reservation_email(
+                                            users(:therapist),
                                             appointments(:reserved_appointment)
                                             ).deliver
     assert_not ActionMailer::Base.deliveries.empty?
@@ -24,7 +26,8 @@ class AppMailerTest < ActionMailer::TestCase
   end
 
   test "client cancelation to client" do
-    email = AppMailer.client_cancellation_for_client(users(:client),
+    email = AppMailer.client_cancellation_for_client(
+                                            users(:client),
                                             appointments(:reserved_appointment)
                                             ).deliver
     assert_not ActionMailer::Base.deliveries.empty?
@@ -35,7 +38,8 @@ class AppMailerTest < ActionMailer::TestCase
   end
 
   test "client cancelation to therapist" do
-    email = AppMailer.client_cancellation_for_therapist(users(:client),
+    email = AppMailer.client_cancellation_for_therapist(
+                                            users(:client),
                                             appointments(:reserved_appointment)
                                             ).deliver
     assert_not ActionMailer::Base.deliveries.empty?
@@ -46,7 +50,8 @@ class AppMailerTest < ActionMailer::TestCase
   end
 
   test "therapist cancelation to therapist" do
-    email = AppMailer.therapist_cancellation_for_therapist(users(:therapist),
+    email = AppMailer.therapist_cancellation_for_therapist(
+                                            users(:therapist),
                                             appointments(:reserved_appointment)
                                             ).deliver
     assert_not ActionMailer::Base.deliveries.empty?
@@ -57,7 +62,7 @@ class AppMailerTest < ActionMailer::TestCase
   end
 
   test "therapist cancelation to client" do
-    email = AppMailer.therapist_cancellation_for_client(users(:therapist),
+    email = AppMailer.therapist_cancellation_for_client(
                                             appointments(:reserved_appointment)
                                             ).deliver
     assert_not ActionMailer::Base.deliveries.empty?
