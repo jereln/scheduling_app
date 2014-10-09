@@ -18,7 +18,7 @@ class AppointmentPolicy < ApplicationPolicy
   end
 
   def destroy?
-    user.therapist?
+    user.therapist? && record.reserved == false
   end
 
   def update?

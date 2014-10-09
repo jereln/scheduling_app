@@ -5,7 +5,7 @@
   <p><%= @user.full_name %>,</p>
   <p>
   <%= @appointment.client.full_name %> reserved an appointment with you on <%= @appointment.date %> at
-  <%= @appointment.start_time %>.
+  <%= @appointment.start_time.strftime("%l:%M%p") %>.
   </p>
 </body>
 </html>

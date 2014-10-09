@@ -51,7 +51,7 @@ class AppointmentsController < ApplicationController
     @appointment.destroy
     authorize @appointment
     redirect_to appointments_url,
-    notice: 'Appointment was successfully destroyed.'
+    notice: 'Appointment was successfully deleted.'
   end
 
   private
