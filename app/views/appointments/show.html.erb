@@ -1,4 +1,4 @@
-<section class="hero">
+p<section class="hero">
   <%= render 'layouts/nav' %>
     <div class="hero-text">
       <h1>Almost there!</h1><br>
@@ -39,6 +39,9 @@
       <% if policy(@appointment).destroy? %>
         <%= link_to 'Delete Appointment', appointment_path(@appointment), method: :delete %>
         |
+      <% end %>
+
+      <% if policy(@appointment).update? %>
         <%= link_to 'Edit', edit_appointment_path(@appointment) %>
         |
       <% end %>

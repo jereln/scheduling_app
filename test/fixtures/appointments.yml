@@ -2,9 +2,11 @@ reserved_appointment:
   date: <%= Date.today.to_s %>
   end_time: 3:00pm
   start_time: 9:00pm
+  reservation_time: 6:00pm
   reserved: true
   client_id: 2
   therapist_id: 1
+  cancelled_id: 2
 
 
 available_appointment:
@@ -19,5 +21,6 @@ new_appointment:
   end_time: 3:00pm
   start_time: 9:00pm
   reserved: true
+  reservation_time: 6:00pm
   client_id: 5
   therapist_id: 1
