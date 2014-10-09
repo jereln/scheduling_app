@@ -25,7 +25,7 @@ feature 'viewing appointments' do
   scenario "a client cannot view another client's appointment" do
     sign_in(:client)
     visit appointment_path(appointments(:new_appointment))
-    page.must_have_content 'Make A Reservation'
+    page.must_have_content 'October'
   end
 
   scenario 'a client can see an available appointment show page' do

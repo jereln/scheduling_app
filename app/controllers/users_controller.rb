@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [ :edit, :update, :destroy]
+  before_action :set_user, only: [ :edit, :update]
 
   def index
-    @users = User.all
+    @clients = User.where(role: 'client').all
+    authorize @clients
   end
 
   def show
@@ -22,8 +23,10 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    @user = User.find(params[:id])
     @user.destroy
-    redirect_to user_url, notice: 'User was successfully destroyed.'
+    authorize @user
+    redirect_to client_list_path, notice: 'User was successfully destroyed.'
   end
 
   private
