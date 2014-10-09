@@ -28,6 +28,10 @@
   <%= button_to 'Reserve Appointment', appointment_path(@appointment, appointment: {reserved: true, client_id: current_user.id}), method: :put, data: {confirm: 'Are you sure?'}%>
 <% end %>
 
+<% if policy(@appointment).destroy? %>
+  <%= button_to 'Delete Appointment', appointment_path(@appointment), method: :delete %>
+<% end %>
+
 <% if policy(@appointment).update? %>
   <%= link_to 'Edit', edit_appointment_path(@appointment) %>
   |

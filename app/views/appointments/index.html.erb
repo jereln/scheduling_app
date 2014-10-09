@@ -13,12 +13,8 @@
     <% @appointments.each do |appointment| %>
       <tr>
         <td><%= link_to appointment.date, appointment %></td>
-        <td><%= appointment.start_time %></td>
-        <% if appointment.client_id != nil %>
-          <td><%= appointment.client.full_name %></td>
-        <% else %>
-          <td></td>
-        <% end %>
+        <td><%= appointment.start_time.strftime("%l:%M%p") %></td>
+        <td><%= appointment.client.full_name if appointment.client %></td>
         <td><%= appointment.therapist.full_name %></td>
         <td><%= appointment.reserved %></td>
       </tr>
