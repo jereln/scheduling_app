@@ -14,7 +14,7 @@ gem 'jquery-ui-rails'
 gem 'jquery-timepicker-rails'
 gem 'figaro'
 gem 'jquery-turbolinks'
-gem 'foundation-rails', '5.4.0'
+gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 
 
