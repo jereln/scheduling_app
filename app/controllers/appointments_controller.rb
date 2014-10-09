@@ -1,5 +1,5 @@
 class AppointmentsController < ApplicationController
-  before_action :set_appointment, only: [:show, :edit, :update, :destroy]
+  before_action :set_appointment, only: [:show, :edit, :update, :destroy, :r]
 
   # GET /appointments
   def index

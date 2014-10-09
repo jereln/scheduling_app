@@ -20,4 +20,10 @@ class AppointmentPolicy < ApplicationPolicy
   def destroy?
     user.therapist?
   end
+
+
+
+  def cancel?
+    user.therapist? || user.id == record.client_id
+  end
 end
