@@ -32,12 +32,13 @@
             <%= f.submit 'Reserve Appointment' %>
           <% end %>
         <% else %>
-          <%= button_to 'Cancel Appointment', appointment_path(@appointment, appointment: {reserved: false, client_id: current_user.id}), method: :patch, data: {confirm: 'Are you sure?'}%>
+          <%= button_to 'Cancel Appointment', appointment_path(@appointment, appointment: {reserved: false, client_id: nil, cancelled_id: @appointment.client_id}), method: :patch, data: {confirm: 'Are you sure?'}%>
         <% end %>
       </p>
 
       <% if policy(@appointment).destroy? %>
-        <%= button_to 'Delete Appointment', appointment_path(@appointment), method: :delete %>
+        <%= link_to 'Delete Appointment', appointment_path(@appointment), method: :delete %>
+        |
         <%= link_to 'Edit', edit_appointment_path(@appointment) %>
         |
       <% end %>

@@ -58,11 +58,11 @@ class AppMailer < ActionMailer::Base
   end
 
   def therapist_cancellation_for_client(user, appointment)
-    @user = user
     @appointment = appointment
+    @user = User.find(appointment.cancelled_id)
     mail(
       from: 'info@scheduler.com',
-      to: appointment.client.email,
+      to: @user.email,
       subject: 'Apppointment cancellation notice'
       )
   end
