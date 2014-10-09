@@ -1,3 +1,7 @@
+<section class="hero">
+  <%= render 'layouts/nav' %>
+</section>
+
 <h1>Listing appointments</h1>
 
 <table>
@@ -13,9 +17,9 @@
     <% @appointments.each do |appointment| %>
       <tr>
         <td><%= link_to appointment.date, appointment %></td>
-        <td><%= appointment.start_time %></td>
+        <td><%= appointment.start_time.strftime("%l:%M%p") %></td>
         <% if appointment.client_id != nil %>
-          <td><%= appointment.client.full_name %></td>
+          <td><%= appointment.client.full_name if appointment.client %></td>
         <% else %>
           <td></td>
         <% end %>

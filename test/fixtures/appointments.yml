@@ -12,6 +12,7 @@ available_appointment:
   end_time: 3:00pm
   start_time: 9:00pm
   reserved: false
+  therapist_id: 1
 
 new_appointment:
   date: <%= Date.tomorrow.to_s %>
@@ -19,3 +20,4 @@ new_appointment:
   start_time: 9:00pm
   reserved: true
   client_id: 5
+  therapist_id: 1

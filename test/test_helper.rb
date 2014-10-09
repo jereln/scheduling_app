@@ -7,17 +7,15 @@ require 'minitest/pride'
 require 'capybara/poltergeist'
 
 class ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
   include Capybara::DSL
   Capybara.javascript_driver = :poltergeist
-  # Add more helper methods to be used by all tests here...
 end
 
 def sign_in(user)
   visit sign_in_path
-  fill_in 'Login', with: users(user).email
+  fill_in 'Email or Username', with: users(user).email
   fill_in 'Password', with: 'password'
-  click_on 'Sign in'
+  click_on 'Sign In!'
 end
 

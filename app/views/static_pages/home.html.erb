@@ -1,6 +1,17 @@
-<h1>Make A Reservation</h1>
+<section class="hero">
+  <%= render 'layouts/nav' %>
+    <div class="hero-text">
+        <h1>Welcome to my awesome website</h1><br>
+        <% if user_signed_in? %>
+          <h3>Select an available slot to reserve</h3>
+        <% else%>
+          <h3>Sign in or create an account to get started</h3>
+        <% end %>
+      </div>
+  </div>
+</section>
 <div id="reservations">
-  <h2 id="month">
+  <h1 id="month">
     <%= link_to "<", date: @date.prev_month %>
     <%= @date.strftime("%B %Y") %>
     <%= link_to ">", date: @date.next_month %>
@@ -10,7 +21,7 @@
     <% if @appointments_by_date[date] %>
       <ul>
         <% @appointments_by_date[date].each do |appointment| %>
-          <li><%= link_to "#{appointment.start_time.strftime("%l:%M")} - #{appointment.end_time.strftime("%l:%M%p")}", appointment %></li>
+          <li class="appointments"><%= link_to "#{appointment.start_time.strftime("%l:%M")} -#{appointment.end_time.strftime("%l:%M%p")}", appointment %></li>
         <% end %>
       </ul>
     <% end %>

@@ -1,36 +1,50 @@
+<section class="hero">
+  <%= render 'layouts/nav' %>
+    <div class="hero-text">
+      <h1>Almost there!</h1><br>
+      <h3>Just pick your time and click 'Reserve Appointment'</h3>
+    </div>
+</section>
+
 <p id="notice"><%= notice %></p>
 
-<div>
-  <strong>Date:</strong> <%= @appointment.date %>
-</div>
+<div class="row">
+  <div class="small-6 small-centered columns">
+    <div class="signup-panel">
+      <p>
+        <strong>Date:</strong> <%= @appointment.date %><br>
+        <strong>Time:</strong> <%= @appointment.start_time.strftime("%l:%M") %> - <%= @appointment.end_time.strftime("%l:%M%p") %><br>
+        <strong>Therapist:</strong> <%= @appointment.therapist.full_name %><br>
+        <% if @user.therapist? %>
+          <strong>Reserved?</strong> <%= @appointment.reserved %><br>
+        <% end %>
+        <% if @user.therapist? && @appointment.client_id != nil %>
+         <strong>Client:</strong> <%= @appointment.client.full_name %>
+        <% end %>
+      </p>
 
-<div>
-  <strong>time</strong> <%= @appointment.start_time.strftime("%l:%M") %> - <%= @appointment.end_time.strftime("%l:%M%p") %>
-</div>
+      <p>
+        <% if @appointment.reserved? == false %>
+          <%= form_for(@appointment) do |f| %>
+            <%= f.text_field :reservation_time, placeholder: "Reservation Time" %>
+            <%= f.hidden_field :reserved, :value => true %>
+            <%= f.hidden_field :client_id, :value => current_user.id %>
+            <%= f.submit 'Reserve Appointment' %>
+          <% end %>
+        <% else %>
+          <%= button_to 'Cancel Appointment', appointment_path(@appointment, appointment: {reserved: false, client_id: nil, cancelled_id: @appointment.client_id}), method: :patch, data: {confirm: 'Are you sure?'}%>
+        <% end %>
+      </p>
 
-<div>
- <strong>Therapist</strong> <%= @appointment.therapist.full_name %>
-</div>
+      <% if policy(@appointment).destroy? %>
+        <%= link_to 'Delete Appointment', appointment_path(@appointment), method: :delete %>
+        |
+        <%= link_to 'Edit', edit_appointment_path(@appointment) %>
+        |
+      <% end %>
 
-<div>
- <strong>reserved?</strong> <%= @appointment.reserved %>
-</div>
-
-<% if @user.therapist? && @appointment.client_id != nil %>
-  <div>
-   <strong>Client</strong> <%= @appointment.client.full_name %>
+      <%= link_to 'Back', root_path %>
+    </div>
   </div>
-<% end %>
+</div>
 
-<% if @appointment.reserved %>
-  <%= button_to 'Cancel Appointment', appointment_path(@appointment, appointment: {reserved: false, client_id: current_user.id}), method: :put, data: {confirm: 'Are you sure?'}%>
-<% else %>
-  <%= button_to 'Reserve Appointment', appointment_path(@appointment, appointment: {reserved: true, client_id: current_user.id}), method: :put, data: {confirm: 'Are you sure?'}%>
-<% end %>
-
-<% if policy(@appointment).update? %>
-  <%= link_to 'Edit', edit_appointment_path(@appointment) %>
-  |
-<% end %>
-
-<%= link_to 'Back', root_path %>
