@@ -13,7 +13,7 @@
 </div>
 
 <div>
-  <strong>time</strong> <%= @appointment.start_time.strftime("%l:%M") %> - <%= @appointment.end_time.strftime("%l:%M%p") %>
+  <strong>time</strong> <%= @appointment.start_time.strftime("%l:%M%p") %> - <%= @appointment.end_time.strftime("%l:%M%p") %>
 </div>
 
 <div>
@@ -37,7 +37,10 @@
 <% end %>
 
 <% if policy(@appointment).destroy? %>
-  <%= button_to 'Delete Appointment', appointment_path(@appointment), method: :delete %>
+  <%= button_to 'Delete Appointment', appointment_path(@appointment), method: :delete, data: {confirm: 'Are you sure?'} %>
+<% end %>
+
+<% if policy(@appointment).update? %>
   <%= link_to 'Edit', edit_appointment_path(@appointment) %>
   |
 <% end %>

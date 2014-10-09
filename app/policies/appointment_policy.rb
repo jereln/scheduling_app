@@ -18,10 +18,12 @@ class AppointmentPolicy < ApplicationPolicy
   end
 
   def destroy?
-    user.therapist?
+    user.therapist? && record.reserved == false
   end
 
-
+  def update?
+    user.therapist?
+  end
 
   def cancel?
     user.therapist? || user.id == record.client_id

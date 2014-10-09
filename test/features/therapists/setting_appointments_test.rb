@@ -15,7 +15,7 @@ feature 'setting appointments' do
   scenario 'a client cannnot set an appointment' do
     sign_in(:client)
     visit new_appointment_path
-    page.must_have_content 'Make A Reservation'
+    page.must_have_content 'October'
   end
 
   scenario 'a client cannot see a New Appointment link' do

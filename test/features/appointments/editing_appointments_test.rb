@@ -13,6 +13,6 @@ feature 'editing appointments' do
   scenario 'client cannot edit appointments' do
     sign_in(:client)
     visit edit_appointment_path(appointments(:available_appointment))
-    page.must_have_content 'Make A Reservation'
+    page.must_have_content 'October'
   end
 end

@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   resources :appointments
 
+  resources :users, only: [:destroy]
   get '/account', to: 'users#show'
   get '/account/edit', to: 'devise/registrations#edit'
+  get '/client_list', to: 'users#index'
 end
