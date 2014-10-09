@@ -20,4 +20,8 @@ class AppointmentPolicy < ApplicationPolicy
   def destroy?
     user.therapist?
   end
+
+  def update?
+    user.therapist?
+  end
 end

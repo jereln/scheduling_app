@@ -15,7 +15,7 @@
         <td><%= link_to appointment.date, appointment %></td>
         <td><%= appointment.start_time %></td>
         <% if appointment.client_id != nil %>
-          <td><%= appointment.client.full_name %></td>
+          <td><%= appointment.client.full_name if appointment.client %></td>
         <% else %>
           <td></td>
         <% end %>
