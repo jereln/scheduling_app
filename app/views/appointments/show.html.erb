@@ -37,7 +37,7 @@
 <% end %>
 
 <% if policy(@appointment).destroy? %>
-  <%= button_to 'Delete Appointment', appointment_path(@appointment), method: :delete %>
+  <%= button_to 'Delete Appointment', appointment_path(@appointment), method: :delete, data: {confirm: 'Are you sure?'} %>
   <%= link_to 'Edit', edit_appointment_path(@appointment) %>
   |
 <% end %>

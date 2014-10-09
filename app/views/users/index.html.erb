@@ -1,0 +1,29 @@
+<section class="hero">
+  <%= render 'layouts/nav' %>
+</section>
+
+<h1>Client List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+      <th>client</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= client.full_name %></td>
+        <td><%= client.username %></td>
+        <td><%= client.email %></td>
+        <td>
+          <%= button_to 'Delete Client Account', client, method: :delete,
+          data: { :confirm => 'Are you sure?' }, class: 'button alert tiny' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
