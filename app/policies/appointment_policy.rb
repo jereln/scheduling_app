@@ -21,9 +21,7 @@ class AppointmentPolicy < ApplicationPolicy
     user.therapist?
   end
 
-  def update?
-    user.therapist?
-  end
+
 
   def cancel?
     user.therapist? || user.id == record.client_id
