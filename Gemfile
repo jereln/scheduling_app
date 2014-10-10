@@ -17,7 +17,6 @@ gem 'jquery-turbolinks'
 gem 'foundation-rails', '5.4.0'
 gem 'foundation-icons-sass-rails'
 
-
 group :development do
   gem 'spring'
   gem 'better_errors'
@@ -42,4 +41,3 @@ group :production do
   gem 'rails_12factor'
   gem 'pg'
 end
-

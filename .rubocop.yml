@@ -1,0 +1,14 @@
+Documentation:
+  Enabled: false
+LineLength:
+  Max: 80
+
+AllCops:
+  RunRailsCops: true
+  Include:
+    - Gemfile
+    - lib/tasks/*
+  Exclude:
+    - db/**/*
+    - bin/**/*
+    - config/**/*
