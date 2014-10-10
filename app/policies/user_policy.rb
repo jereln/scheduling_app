@@ -4,6 +4,6 @@ class UserPolicy < ApplicationPolicy
   end
 
   def destroy?
-    user.therapist? || user.id == user.id
+    user.therapist?
   end
 end
