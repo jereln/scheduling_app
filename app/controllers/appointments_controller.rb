@@ -43,7 +43,7 @@ class AppointmentsController < ApplicationController
       .referer.include?('/edit')
       redirect_to @appointment, notice: 'Appointment was successfully updated.'
     else
-      render :edit
+      redirect_to @appointment, notice: 'Reservation time cannot be empty'
     end
   end
 
