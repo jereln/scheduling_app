@@ -5,7 +5,7 @@ feature 'editing appointments' do
     sign_in(:therapist)
     visit appointment_path(appointments(:available_appointment))
     click_link 'Edit'
-    fill_in 'Date', with: '10/31/2014'
+    fill_in 'Date', with: '2014-10-30'
     click_button 'Update Appointment'
     page.must_have_content 'Appointment was successfully updated.'
   end

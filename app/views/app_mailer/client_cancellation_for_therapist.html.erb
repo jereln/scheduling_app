@@ -4,6 +4,6 @@
 <body>
   <p><%= @user.full_name %>,</p>
   <p>
-  This is to notify you that <%= @appointment.client.full_name %> has cancelled their appointment with you on <%= @appointment.date %> at <%= @appointment.start_time.strftime("%l:%M%p") %>.
+  This is to notify you that <%= User.find(@appointment.cancelled_id).full_name %> has cancelled their appointment with you on <%= @appointment.date %> at <%= @appointment.reservation_time.strftime("%l:%M%p") %>.
 </body>
 </html>

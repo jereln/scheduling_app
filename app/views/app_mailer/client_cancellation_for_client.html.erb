@@ -4,6 +4,6 @@
 <body>
   <p><%= @user.full_name %>,</p>
   <p>
-  This is to confirm that your massage appointment on <%= @appointment.date %> at <%= @appointment.start_time.strftime("%l:%M%p") %> has been cancelled.
+  This is to confirm that your massage appointment on <%= @appointment.date %> at <%= @appointment.reservation_time.strftime("%l:%M%p") %> has been cancelled.
 </body>
 </html>

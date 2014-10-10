@@ -16,6 +16,7 @@ gem 'figaro'
 gem 'jquery-turbolinks'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
+gem 'seed_dump'
 
 
 group :development do
@@ -35,6 +36,7 @@ group :test do
   gem 'poltergeist'
   gem 'launchy'
   gem 'minitest-rails'
+  gem 'simplecov', require: false
 end
 
 group :production do
@@ -42,4 +44,3 @@ group :production do
   gem 'rails_12factor'
   gem 'pg'
 end
-

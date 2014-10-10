@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [ :edit, :update]
+  before_action :set_user, only: [:edit, :update]
 
   def index
     @clients = User.where(role: 'client').all
@@ -8,7 +8,12 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @appointments =  @user.therapist? ? @user.therapist_appts : @user.client_appts
+    @appointments =
+    if @user.therapist?
+      @user.therapist_appts
+    else
+      @user.client_appts
+    end
   end
 
   def edit
