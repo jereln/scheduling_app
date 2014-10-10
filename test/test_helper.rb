@@ -5,8 +5,8 @@ require 'minitest/rails'
 require 'minitest/rails/capybara'
 require 'minitest/pride'
 require 'capybara/poltergeist'
-require 'coveralls'
-Coveralls.wear!('rails')
+require 'simplecov'
+SimpleCov.start
 
 module ActiveSupport
   class TestCase
