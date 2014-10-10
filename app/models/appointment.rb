@@ -10,8 +10,10 @@ class Appointment < ActiveRecord::Base
   validate :valid_block
 
   def reservation_valid
-    if reservation_time < start_time || reservation_time > end_time
-      errors.add(:reservation_time, 'must be within the available block')
+    if reservation_time != nil
+      if reservation_time < start_time || reservation_time > end_time
+        errors.add(:reservation_time, 'must be within the available block')
+      end
     end
   end
 
@@ -23,7 +25,8 @@ class Appointment < ActiveRecord::Base
     if date < Time.now
       errors.add(:date, 'must be in the future')
     end
-    
+  end
+
   def user_client?
     client_id
   end
