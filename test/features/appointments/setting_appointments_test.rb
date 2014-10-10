@@ -5,7 +5,7 @@ feature 'setting appointments' do
     sign_in(:therapist)
 
     visit new_appointment_path
-    fill_in 'Date', with: '10/21/14'
+    fill_in 'Date', with: '2014-10-30'
     fill_in 'Start Time', with: '3:00pm'
     fill_in 'End Time', with: '6:00pm'
     click_button 'Create Appointment'

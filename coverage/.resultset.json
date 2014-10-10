@@ -1,7 +1,11 @@
 {
   "MiniTest": {
     "coverage": {
-      "/Users/reedns/projects/scheduling-app/app/models/appointment.rb": [
+      "/Users/jnavarrete/Documents/projects/scheduling_app/app/models/appointment.rb": [
+        1,
+        1,
+        1,
+        null,
         1,
         1,
         1,
@@ -11,7 +15,7 @@
         1,
         null
       ],
-      "/Users/reedns/projects/scheduling-app/app/controllers/appointments_controller.rb": [
+      "/Users/jnavarrete/Documents/projects/scheduling_app/app/controllers/appointments_controller.rb": [
         1,
         1,
         1,
@@ -82,7 +86,7 @@
         null,
         null
       ],
-      "/Users/reedns/projects/scheduling-app/app/controllers/application_controller.rb": [
+      "/Users/jnavarrete/Documents/projects/scheduling_app/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -117,6 +121,6 @@
         null
       ]
     },
-    "timestamp": 1412962001
+    "timestamp": 1412961923
   }
 }
