@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class AppMailerTest < ActionMailer::TestCase
-  test "reservation to client" do
+  test 'reservation to client' do
     email = AppMailer.client_reservation_email(
                                             users(:client),
                                             appointments(:reserved_appointment)
@@ -13,7 +13,7 @@ class AppMailerTest < ActionMailer::TestCase
     assert_equal 'Appointment reservaton confirmation', email.subject
   end
 
-  test "reservation to therapist" do
+  test 'reservation to therapist' do
     email = AppMailer.therapist_reservation_email(
                                             users(:therapist),
                                             appointments(:reserved_appointment)
@@ -25,7 +25,7 @@ class AppMailerTest < ActionMailer::TestCase
     assert_equal 'Appointment reservation notice', email.subject
   end
 
-  test "client cancelation to client" do
+  test 'client cancelation to client' do
     email = AppMailer.client_cancellation_for_client(
                                             users(:client),
                                             appointments(:reserved_appointment)
@@ -37,7 +37,7 @@ class AppMailerTest < ActionMailer::TestCase
     assert_equal 'Apppointment cancellation confirmation', email.subject
   end
 
-  test "client cancelation to therapist" do
+  test 'client cancelation to therapist' do
     email = AppMailer.client_cancellation_for_therapist(
                                             users(:client),
                                             appointments(:reserved_appointment)
@@ -49,7 +49,7 @@ class AppMailerTest < ActionMailer::TestCase
     assert_equal 'Apppointment cancellation notice', email.subject
   end
 
-  test "therapist cancelation to therapist" do
+  test 'therapist cancelation to therapist' do
     email = AppMailer.therapist_cancellation_for_therapist(
                                             users(:therapist),
                                             appointments(:reserved_appointment)
@@ -61,7 +61,7 @@ class AppMailerTest < ActionMailer::TestCase
     assert_equal 'Apppointment cancellation confirmation', email.subject
   end
 
-  test "therapist cancelation to client" do
+  test 'therapist cancelation to client' do
     email = AppMailer.therapist_cancellation_for_client(
                                             appointments(:reserved_appointment)
                                             ).deliver
