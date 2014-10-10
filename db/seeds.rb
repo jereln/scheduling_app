@@ -17,7 +17,7 @@ User.create!([
   full_name: "jimbo jones",
   role: "client",
   email: "jimbo@test.com",
-  encrypted_password: 'password',
+  password: 'password',
   reset_password_token: nil,
   reset_password_sent_at: nil,
   remember_created_at: nil, sign_in_count: 7,
