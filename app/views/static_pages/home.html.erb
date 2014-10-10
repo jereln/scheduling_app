@@ -1,14 +1,24 @@
 <section class="hero">
   <%= render 'layouts/nav' %>
     <div class="hero-text">
-        <h1>Welcome to Massage Scheduler!</h1><br>
-        <% if user_signed_in? %>
-          <h3>Select an available slot to reserve</h3>
-        <% else%>
-          <h3>Sign in or create an account to get started</h3>
-        <% end %>
+      <h1>Welcome to Massage Scheduler!</h1><br>
+      <% if user_signed_in? %>
+        <h3>Select an available slot to reserve</h3>
+      <% else%>
+        <h3>Sign in or create an account to get started</h3>
+      <% end %>
+      <div>
+        <h5>
+          Now you can easily schedule appointments with your massage
+          therapist. No more <br/> back and forth emails and texts to figure out
+          what dates you are both available. <br/> With Massage Scheduler your
+          therapist can set the dates and time slots that she is <br/> available.
+          All you have to do is select date that works for you and pick a
+          start time <br/> within the available time range.
+        </h5>
       </div>
-  </div>
+    </div>
+
 </section>
 <div id="reservations">
   <h1 id="month">
