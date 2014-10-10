@@ -32,7 +32,7 @@
             <strong>Client:</strong>
               <%= appt.client.full_name %></p>
         <% end %>
-          <%= button_to 'Cancel Appointment', appointment_path(appt, appointment: {reserved: false, client_id: nil, cancelled_id: @appointment.client_id}), method: :put, data: {confirm: 'Are you sure?'} %>
+          <%= button_to 'Cancel Appointment', appointment_path(appt, appointment: {reserved: false, client_id: nil, cancelled_id: appt.client_id}), method: :put, data: {confirm: 'Are you sure?'} %>
           <hr>
       <% end %>
     <% end %>
