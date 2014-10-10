@@ -3,8 +3,7 @@ User.create!([
   full_name: "Mary Jones",
   role: "therapist",
   email: "mary@test.com",
-  encrypted_password:
-  "$2a$10$xRikiHw1/3UduXV9Ghpq1uf9HE5W88Xm/12Z62Qt3Av5grI3xLUHC",
+  password:'password',
   reset_password_token: nil,
   reset_password_sent_at: nil,
   remember_created_at: nil,
@@ -18,8 +17,7 @@ User.create!([
   full_name: "jimbo jones",
   role: "client",
   email: "jimbo@test.com",
-  encrypted_password:
-  "$2a$10$PaOMj1ooOMWtfR3SMQkb/O4ZjlL2mopF9sQHLVJTr4enoZFnrcSi2",
+  password: 'password',
   reset_password_token: nil,
   reset_password_sent_at: nil,
   remember_created_at: nil, sign_in_count: 7,

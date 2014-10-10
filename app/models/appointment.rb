@@ -5,6 +5,7 @@ class Appointment < ActiveRecord::Base
   validates :date, presence: true
   validates :start_time, presence: true
   validates :end_time, presence: true
+  validates :reservation_time, presence: true, on: :update, if: :user_client?
   validate :reservation_valid, on: :update
   validate :valid_block
 
@@ -22,5 +23,8 @@ class Appointment < ActiveRecord::Base
     if date < Time.now
       errors.add(:date, 'must be in the future')
     end
+    
+  def user_client?
+    client_id
   end
 end
