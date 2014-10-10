@@ -17,6 +17,7 @@ gem 'jquery-turbolinks'
 gem 'foundation-rails', '5.4.0'
 gem 'foundation-icons-sass-rails'
 gem 'coveralls', require: false
+gem 'seed_dump'
 
 group :development do
   gem 'spring'
