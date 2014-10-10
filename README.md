@@ -1,6 +1,6 @@
 #Massage Therapist Scheduling App
+[ ![Codeship Status for jereln/scheduling_app](https://www.codeship.io/projects/721b7af0-32cb-0132-4537-5696ea0452a8/status)](https://www.codeship.io/projects/40479)
 [![Coverage Status](https://coveralls.io/repos/jereln/scheduling_app/badge.png)](https://coveralls.io/r/jereln/scheduling_app)
-
 [![forthebadge](http://forthebadge.com/badges/validated-html2.svg)](http://forthebadge.com)
 
 ##Overview
