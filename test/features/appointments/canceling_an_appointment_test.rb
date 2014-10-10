@@ -5,14 +5,14 @@ feature 'canceling an appointment' do
     sign_in(:therapist)
     visit appointment_path(appointments(:reserved_appointment))
     click_button 'Cancel Appointment'
-    page.must_have_content 'reserved? false'
+    page.must_have_content 'Reserved? false'
   end
 
   scenario 'a client can cancel their own appointment' do
     sign_in(:client)
     visit account_path(users(:client))
     click_button 'Cancel Appointment'
-    page.must_have_content 'reserved? false'
+    page.must_have_content 'Reserve Appointment'
   end
 
   scenario 'a client cannot cancel another client appointment' do

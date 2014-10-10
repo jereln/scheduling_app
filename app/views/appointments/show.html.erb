@@ -1,4 +1,4 @@
-<section class="hero">
+p<section class="hero">
   <%= render 'layouts/nav' %>
     <div class="hero-text">
       <h1>Almost there!</h1><br>
@@ -9,7 +9,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-  <div class="small-6 small-centered columns">
+  <div class="small-8 columns">
     <div class="signup-panel">
       <p>
         <strong>Date:</strong> <%= @appointment.date %><br>
@@ -26,19 +26,28 @@
       <p>
         <% if @appointment.reserved? == false %>
           <%= form_for(@appointment) do |f| %>
-            <%= f.text_field :reservation_time, placeholder: "Reservation Time" %>
+          <div class="row collapse">
+            <div class="small-2 columns ">
+              <span class="prefix"><i class="fi-clock"></i></span>
+            </div>
+          <div class="small-10 columns">
+            <%= f.text_field :reservation_time, placeholder: "Reservation Time"%>
+          </div>
             <%= f.hidden_field :reserved, :value => true %>
             <%= f.hidden_field :client_id, :value => current_user.id %>
-            <%= f.submit 'Reserve Appointment' %>
+            <%= f.submit 'Reserve Appointment', class: 'button tiny' %>
           <% end %>
         <% else %>
-          <%= button_to 'Cancel Appointment', appointment_path(@appointment, appointment: {reserved: false, client_id: nil, cancelled_id: @appointment.client_id}), method: :patch, data: {confirm: 'Are you sure?'}%>
+          <%= button_to 'Cancel Appointment', appointment_path(@appointment, appointment: {reserved: false, client_id: nil, cancelled_id: @appointment.client_id}), method: :patch, data: {confirm: 'Are you sure?'}, class: 'button tiny alert' %>
         <% end %>
       </p>
 
       <% if policy(@appointment).destroy? %>
         <%= link_to 'Delete Appointment', appointment_path(@appointment), method: :delete %>
         |
+      <% end %>
+
+      <% if policy(@appointment).update? %>
         <%= link_to 'Edit', edit_appointment_path(@appointment) %>
         |
       <% end %>
