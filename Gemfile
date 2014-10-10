@@ -16,7 +16,6 @@ gem 'figaro'
 gem 'jquery-turbolinks'
 gem 'foundation-rails', '5.4.0'
 gem 'foundation-icons-sass-rails'
-gem 'coveralls', require: false
 
 group :development do
   gem 'spring'
@@ -35,6 +34,7 @@ group :test do
   gem 'poltergeist'
   gem 'launchy'
   gem 'minitest-rails'
+  gem 'simplecov', require: false
 end
 
 group :production do
