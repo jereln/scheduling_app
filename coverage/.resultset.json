@@ -1,0 +1,13 @@
+{
+  "MiniTest": {
+    "coverage": {
+      "/Users/reedns/projects/scheduling-app/app/models/appointment.rb": [
+        1,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1412901247
+  }
+}
