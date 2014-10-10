@@ -15,7 +15,7 @@ feature 'viewing appointments' do
     page.must_have_content users(:client).full_name
   end
 
-  scenario 'a client can only see available appointments in the appointments index' do
+  scenario 'a client can only see available appointments in the appointments' do
     sign_in(:client)
     visit appointments_path
     page.must_have_content appointments(:available_appointment).date
