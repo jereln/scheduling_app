@@ -31,7 +31,11 @@
     <% if @appointments_by_date[date] %>
       <ul>
         <% @appointments_by_date[date].each do |appointment| %>
-          <li class="appointments"><%= link_to "#{appointment.start_time.strftime("%l:%M")} -#{appointment.end_time.strftime("%l:%M%p")}", appointment %></li>
+          <% if appointment.reserved? == false %>
+            <li class="appointments"><%= link_to "#{appointment.start_time.strftime("%l:%M")} -#{appointment.end_time.strftime("%l:%M%p")}", appointment %></li>
+          <% else %>
+            <li class="reserved"><%= link_to "#{appointment.start_time.strftime("%l:%M")} -#{appointment.end_time.strftime("%l:%M%p")}", appointment %></li>
+          <% end %>
         <% end %>
       </ul>
     <% end %>
