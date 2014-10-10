@@ -39,7 +39,8 @@ class AppointmentsController < ApplicationController
   # PATCH/PUT /appointments/1
   def update
     if @appointment.update(appointment_params)
-      AppMailer.send_emails(current_user, @appointment) unless request.referer.include?('/edit')
+      AppMailer.send_emails(current_user, @appointment) unless request
+      .referer.include?('/edit')
       redirect_to @appointment, notice: 'Appointment was successfully updated.'
     else
       render :edit
@@ -51,7 +52,7 @@ class AppointmentsController < ApplicationController
     @appointment.destroy
     authorize @appointment
     redirect_to appointments_url,
-    notice: 'Appointment was successfully deleted.'
+                notice: 'Appointment was successfully deleted.'
   end
 
   private
@@ -61,6 +62,8 @@ class AppointmentsController < ApplicationController
   end
 
   def appointment_params
-    params.require(:appointment).permit(:date, :start_time, :end_time, :reserved, :therapist_id, :client_id, :reservation_time, :cancelled_id)
+    params.require(:appointment).permit(:date, :start_time, :end_time,
+                                        :reserved, :therapist_id, :client_id,
+                                        :reservation_time, :cancelled_id)
   end
 end

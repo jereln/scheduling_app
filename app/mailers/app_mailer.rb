@@ -3,7 +3,11 @@ class AppMailer < ActionMailer::Base
     if appointment.reserved == true
       send_reservation_emails(user, appointment)
     else
-      user.therapist? ? therapist_cancellation(user, appointment) : client_cancellation(user, appointment)
+      if user.therapist?
+        therapist_cancellation(user, appointment)
+      else
+        client_cancellation(user, appointment)
+      end
     end
   end
 
@@ -70,7 +74,8 @@ class AppMailer < ActionMailer::Base
 
   def send_reservation_emails(user, appointment)
     AppMailer.client_reservation_email(user, appointment).deliver
-    AppMailer.therapist_reservation_email(appointment.therapist, appointment).deliver
+    AppMailer.therapist_reservation_email(appointment.therapist, appointment)
+    .deliver
   end
 
   def therapist_cancellation(user, appointment)
@@ -79,7 +84,8 @@ class AppMailer < ActionMailer::Base
   end
 
   def client_cancellation(user, appointment)
-    AppMailer.client_cancellation_for_therapist(appointment.therapist, appointment).deliver
+    AppMailer.client_cancellation_for_therapist(appointment
+      .therapist, appointment).deliver
     AppMailer.client_cancellation_for_client(user, appointment).deliver
   end
 end
